@@ -2,7 +2,6 @@
 
 use Livewire\Volt\Component;
 use App\Models\User;
-use Livewire\Attributes\Rule;
 use Livewire\Attributes\Title;
 use Illuminate\Support\Facades\Hash;
 
@@ -10,21 +9,22 @@ new
 #[Title('Register')]
 class extends Component {
 
-    #[Rule('required|string|max:255|unique:users')]
     public string $name = '';
 
-    #[Rule('required|email|unique:users')]
     public string $email = '';
 
-    #[Rule('required|confirmed')]
     public string $password = '';
 
-    #[Rule('required')]
     public string $password_confirmation = '';
 
     public function register()
     {
-        $data = $this->validate();
+        $data = $this->validate([
+            'name' => 'required|string|max:255|unique:users',
+            'email' => 'required|email|unique:users',
+            'password' => 'required|confirmed',
+            'password_confirmation' => 'required'
+        ]);
 
         $data['password'] = Hash::make($data['password']);
 

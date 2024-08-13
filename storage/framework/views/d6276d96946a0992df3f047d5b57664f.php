@@ -125,6 +125,26 @@ use Illuminate\Support\Facades\Session;
 <?php $component = $__componentOriginal7c3255ff27a5c6d076ca64dbcfc1f879; ?>
 <?php unset($__componentOriginal7c3255ff27a5c6d076ca64dbcfc1f879); ?>
 <?php endif; ?>
+        <?php if (isset($component)) { $__componentOriginal7c3255ff27a5c6d076ca64dbcfc1f879 = $component; } ?>
+<?php if (isset($attributes)) { $__attributesOriginal7c3255ff27a5c6d076ca64dbcfc1f879 = $attributes; } ?>
+<?php $component = Mary\View\Components\MenuItem::resolve(['title' => ''.e(__('Register')).'','icon' => 'o-user-plus','link' => ''.e(route('register')).'','route' => 'register'] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
+<?php $component->withName('menu-item'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag): ?>
+<?php $attributes = $attributes->except(\Mary\View\Components\MenuItem::ignoredParameterNames()); ?>
+<?php endif; ?>
+<?php $component->withAttributes([]); ?>
+<?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__attributesOriginal7c3255ff27a5c6d076ca64dbcfc1f879)): ?>
+<?php $attributes = $__attributesOriginal7c3255ff27a5c6d076ca64dbcfc1f879; ?>
+<?php unset($__attributesOriginal7c3255ff27a5c6d076ca64dbcfc1f879); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginal7c3255ff27a5c6d076ca64dbcfc1f879)): ?>
+<?php $component = $__componentOriginal7c3255ff27a5c6d076ca64dbcfc1f879; ?>
+<?php unset($__componentOriginal7c3255ff27a5c6d076ca64dbcfc1f879); ?>
+<?php endif; ?>
         <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
 
         <?php if (isset($component)) { $__componentOriginal7c3255ff27a5c6d076ca64dbcfc1f879 = $component; } ?>
@@ -147,7 +167,7 @@ use Illuminate\Support\Facades\Session;
 <?php $component = $__componentOriginal7c3255ff27a5c6d076ca64dbcfc1f879; ?>
 <?php unset($__componentOriginal7c3255ff27a5c6d076ca64dbcfc1f879); ?>
 <?php endif; ?>
-        <?php if (isset($component)) { $__componentOriginald82092fa13795886cb51cb7dc7d7b48e = $component; } ?>
+            <?php if (isset($component)) { $__componentOriginald82092fa13795886cb51cb7dc7d7b48e = $component; } ?>
 <?php if (isset($attributes)) { $__attributesOriginald82092fa13795886cb51cb7dc7d7b48e = $attributes; } ?>
 <?php $component = Mary\View\Components\MenuSub::resolve(['title' => 'Settings','icon' => 'o-cog-6-tooth'] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
 <?php $component->withName('menu-sub'); ?>
@@ -157,7 +177,7 @@ use Illuminate\Support\Facades\Session;
 <?php $attributes = $attributes->except(\Mary\View\Components\MenuSub::ignoredParameterNames()); ?>
 <?php endif; ?>
 <?php $component->withAttributes([]); ?>
-            <?php if (isset($component)) { $__componentOriginal7c3255ff27a5c6d076ca64dbcfc1f879 = $component; } ?>
+                <?php if (isset($component)) { $__componentOriginal7c3255ff27a5c6d076ca64dbcfc1f879 = $component; } ?>
 <?php if (isset($attributes)) { $__attributesOriginal7c3255ff27a5c6d076ca64dbcfc1f879 = $attributes; } ?>
 <?php $component = Mary\View\Components\MenuItem::resolve(['title' => 'Wifi','icon' => 'o-wifi','link' => '####'] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
 <?php $component->withName('menu-item'); ?>
@@ -177,7 +197,7 @@ use Illuminate\Support\Facades\Session;
 <?php $component = $__componentOriginal7c3255ff27a5c6d076ca64dbcfc1f879; ?>
 <?php unset($__componentOriginal7c3255ff27a5c6d076ca64dbcfc1f879); ?>
 <?php endif; ?>
-            <?php if (isset($component)) { $__componentOriginal7c3255ff27a5c6d076ca64dbcfc1f879 = $component; } ?>
+                <?php if (isset($component)) { $__componentOriginal7c3255ff27a5c6d076ca64dbcfc1f879 = $component; } ?>
 <?php if (isset($attributes)) { $__attributesOriginal7c3255ff27a5c6d076ca64dbcfc1f879 = $attributes; } ?>
 <?php $component = Mary\View\Components\MenuItem::resolve(['title' => 'Archives','icon' => 'o-archive-box','link' => '####'] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
 <?php $component->withName('menu-item'); ?>
@@ -197,7 +217,7 @@ use Illuminate\Support\Facades\Session;
 <?php $component = $__componentOriginal7c3255ff27a5c6d076ca64dbcfc1f879; ?>
 <?php unset($__componentOriginal7c3255ff27a5c6d076ca64dbcfc1f879); ?>
 <?php endif; ?>
-         <?php echo $__env->renderComponent(); ?>
+             <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
 <?php if (isset($__attributesOriginald82092fa13795886cb51cb7dc7d7b48e)): ?>
 <?php $attributes = $__attributesOriginald82092fa13795886cb51cb7dc7d7b48e; ?>
@@ -207,7 +227,7 @@ use Illuminate\Support\Facades\Session;
 <?php $component = $__componentOriginald82092fa13795886cb51cb7dc7d7b48e; ?>
 <?php unset($__componentOriginald82092fa13795886cb51cb7dc7d7b48e); ?>
 <?php endif; ?>
-     <?php echo $__env->renderComponent(); ?>
+         <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
 <?php if (isset($__attributesOriginal5a2f10112e92a9c01ae3ba423b1cc044)): ?>
 <?php $attributes = $__attributesOriginal5a2f10112e92a9c01ae3ba423b1cc044; ?>
