@@ -21,28 +21,6 @@
 <?php $attributes = $attributes->except(\Mary\View\Components\Nav::ignoredParameterNames()); ?>
 <?php endif; ?>
 <?php $component->withAttributes(['class' => 'lg:hidden']); ?>
-         <?php $__env->slot('brand', null, []); ?> 
-            <?php if (isset($component)) { $__componentOriginalac37604bae5cded3771d6931140b8398 = $component; } ?>
-<?php if (isset($attributes)) { $__attributesOriginalac37604bae5cded3771d6931140b8398 = $attributes; } ?>
-<?php $component = App\View\Components\AppBrand::resolve([] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
-<?php $component->withName('app-brand'); ?>
-<?php if ($component->shouldRender()): ?>
-<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
-<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag): ?>
-<?php $attributes = $attributes->except(\App\View\Components\AppBrand::ignoredParameterNames()); ?>
-<?php endif; ?>
-<?php $component->withAttributes([]); ?>
-<?php echo $__env->renderComponent(); ?>
-<?php endif; ?>
-<?php if (isset($__attributesOriginalac37604bae5cded3771d6931140b8398)): ?>
-<?php $attributes = $__attributesOriginalac37604bae5cded3771d6931140b8398; ?>
-<?php unset($__attributesOriginalac37604bae5cded3771d6931140b8398); ?>
-<?php endif; ?>
-<?php if (isset($__componentOriginalac37604bae5cded3771d6931140b8398)): ?>
-<?php $component = $__componentOriginalac37604bae5cded3771d6931140b8398; ?>
-<?php unset($__componentOriginalac37604bae5cded3771d6931140b8398); ?>
-<?php endif; ?>
-         <?php $__env->endSlot(); ?>
          <?php $__env->slot('actions', null, []); ?> 
             <label for="main-drawer" class="lg:hidden me-3">
                 <?php if (isset($component)) { $__componentOriginalce0070e6ae017cca68172d0230e44821 = $component; } ?>
@@ -135,6 +113,7 @@ if (isset($__slots)) unset($__slots);
 
         
          <?php $__env->slot('content', null, []); ?> 
+            <div class="flex items-center justify-center mb-4 text-4xl font-extrabold"><a href="/">Albums</a></div>
             <?php echo e($slot); ?>
 
          <?php $__env->endSlot(); ?>

@@ -12,9 +12,6 @@
 
     {{-- NAVBAR mobile only --}}
     <x-nav sticky class="lg:hidden">
-        <x-slot:brand>
-            <x-app-brand />
-        </x-slot:brand>
         <x-slot:actions>
             <label for="main-drawer" class="lg:hidden me-3">
                 <x-icon name="o-bars-3" class="cursor-pointer" />
@@ -36,6 +33,7 @@
 
         {{-- The `$slot` goes here --}}
         <x-slot:content>
+            <div class="flex items-center justify-center mb-4 text-4xl font-extrabold"><a href="/">Albums</a></div>
             {{ $slot }}
         </x-slot:content>
     </x-main>
