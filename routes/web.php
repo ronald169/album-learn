@@ -3,7 +3,10 @@
 use Illuminate\Support\Facades\Route;
 use Livewire\Volt\Volt;
 
-Volt::route('/', 'index');
+Route::get('/', function () {
+    return redirect()->route('home', ['category' => 'all']);
+});
+
 
 Route::middleware('guest')->group(function () {
     Volt::route('/register', 'auth.register')->name('register');
@@ -15,3 +18,5 @@ Route::middleware('guest')->group(function () {
 Route::middleware('auth')->group(function () {
     Volt::route('images/create', 'images.create')->name('images.create');
 });
+
+Volt::route('/{category}/{param?}', 'index')->name('home');

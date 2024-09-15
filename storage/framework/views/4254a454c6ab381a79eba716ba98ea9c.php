@@ -7,6 +7,8 @@
     <title><?php echo e(isset($title) ? $title.' - '.config('app.name') : config('app.name')); ?></title>
 
     <?php echo app('Illuminate\Foundation\Vite')(['resources/css/app.css', 'resources/js/app.js']); ?>
+    <script src=" https://cdn.jsdelivr.net/npm/simplelightbox@2.14.2/dist/simple-lightbox.min.js "></script>
+    <link href=" https://cdn.jsdelivr.net/npm/simplelightbox@2.14.2/dist/simple-lightbox.min.css " rel="stylesheet">
 </head>
 <body class="min-h-screen font-sans antialiased bg-base-200/50 dark:bg-base-200">
 
@@ -149,6 +151,17 @@ if (isset($__slots)) unset($__slots);
 <?php $component = $__componentOriginal2aca76be1376419dfd37220f36011753; ?>
 <?php unset($__componentOriginal2aca76be1376419dfd37220f36011753); ?>
 <?php endif; ?>
+
+    <script>
+        // On vérifie si lightbox existe déjà
+        if (typeof lightbox === 'undefined') {
+            // S'il n'existe pas, on le crée
+            const lightbox = new SimpleLightbox('.gallery a', {});
+        } else {
+            // S'il existe déjà, on met à jour ses propriétés
+            lightbox.refresh();
+        }
+    </script>
 </body>
 </html>
 <?php /**PATH C:\laragon\www\album\resources\views/components/layouts/app.blade.php ENDPATH**/ ?>
