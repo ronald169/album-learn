@@ -245,5 +245,12 @@
     "Adult content": "Contenu pour adulte",
     "Image added with success.": "L'image a bien été ajoutée",
     "All categories": "Toutes les catégories",
-    "Categories": "Catégories"
+    "Categories": "Catégories",
+    "Create a new album": "Créer un nouvel album",
+    "Album created with success.": "L'album a bien été créé",
+    "Add album": "Ajouter un album",
+    "Are you sure to delete this album?": "Voulez-vous vraiment supprimer cet album ?",
+    "Manage albums": "Gestion des albums",
+    "Album updated with success.": "L'album a bien été modifié"
+
 }

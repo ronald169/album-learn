@@ -17,6 +17,9 @@ Route::middleware('guest')->group(function () {
 
 Route::middleware('auth')->group(function () {
     Volt::route('images/create', 'images.create')->name('images.create');
+    Volt::route('albums', 'albums.index')->name('albums.index');
+    Volt::route('albums/create', 'albums.create')->name('albums.create');
+    Volt::route('albums/{album}/edit', 'albums.edit')->name('albums.edit');
 });
 
 Volt::route('/{category}/{param?}', 'index')->name('home');
