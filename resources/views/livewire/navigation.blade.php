@@ -46,11 +46,19 @@ new class extends Component
             @endforeach
         </x-menu-sub>
         @auth
+            @if($albums = auth()->user()->albums)
+                <x-menu-sub title="{{__('Albums')}}" icon="o-book-open">
+                    @foreach($albums as $album)
+                        <x-menu-item
+                            title="{{ $album->name }}"
+                            link="{{ route('home', ['category' => 'album', 'param' => $album->slug]) }}" />
+                    @endforeach
+                </x-menu-sub>
+            @endif
             <x-menu-sub title="{{__('Images')}}" icon="o-photo">
                 <x-menu-item title="{{__('Add image')}}" icon="o-plus" link="{{ route('images.create') }}" />
                 <x-menu-item title="{{__('Add album')}}" icon="o-plus" link="{{ route('albums.create') }}" />
                 <x-menu-item title="{{__('Manage albums')}}" icon="o-archive-box" link="{{ route('albums.index') }}" />
-        <x-menu-item title="{{__('Add album')}}" icon="o-plus" link="{{ route('albums.create') }}" />
             </x-menu-sub>
         @endauth
     </x-menu>

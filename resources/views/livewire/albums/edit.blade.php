@@ -16,6 +16,10 @@ new class extends Component
 
     public function mount(): void
     {
+        if (Auth::id() !== $this->album->user_id) {
+            abort(403);
+        }
+
         $this->fill($this->album);
     }
 

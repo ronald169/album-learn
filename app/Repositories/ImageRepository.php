@@ -18,16 +18,37 @@ class ImageRepository
             $query->whereAdult(false);
         }
 
-        if ($param != '') {
-            $query->whereUserId($param);
-        }
-
-        if ($category != 'all') {
-            $query->whereHas('category', function ($query) use ($category) {
-                $query->whereSlug($category);
+        if ($category == 'album') {
+            $query->whereHas('albums', function ($query) use ($param) {
+                $query->whereSlug($param);
             });
+        } else {
+            if ($param != '') {
+                $query->whereUserId($param);
+            }
+            if ($category != 'all') {
+                $query->whereHas('category', function ($query) use ($category) {
+                    $query->whereSlug($category);
+                });
+            }
         }
 
         return $query->paginate($user->pagination ?? config('app.pagination'));
+    }
+
+    public function getImage(int $id): Image
+    {
+        return Image::find($id);
+    }
+
+    public function getImageWithAlbums(int $id): Image
+    {
+        return Image::with('albums')->find($id);
+    }
+
+    public function saveImage(Image $image, array $data, array $albums_multi_ids): void
+    {
+        $image->update($data);
+        $image->albums()->sync($albums_multi_ids);
     }
 }
