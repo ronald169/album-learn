@@ -29,6 +29,8 @@
             {{-- BRAND --}}
             <x-app-brand class="p-5 pt-3" />
 
+            <x-theme-toggle class="btn btn-circle" />
+
             {{-- MENU --}}
             <livewire:navigation />
         </x-slot:sidebar>

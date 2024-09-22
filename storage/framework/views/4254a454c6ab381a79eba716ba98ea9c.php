@@ -94,6 +94,27 @@
 <?php unset($__componentOriginalac37604bae5cded3771d6931140b8398); ?>
 <?php endif; ?>
 
+            <?php if (isset($component)) { $__componentOriginal96fdff35e0ddfd31ddf96c499b591184 = $component; } ?>
+<?php if (isset($attributes)) { $__attributesOriginal96fdff35e0ddfd31ddf96c499b591184 = $attributes; } ?>
+<?php $component = Mary\View\Components\ThemeToggle::resolve([] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
+<?php $component->withName('theme-toggle'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag): ?>
+<?php $attributes = $attributes->except(\Mary\View\Components\ThemeToggle::ignoredParameterNames()); ?>
+<?php endif; ?>
+<?php $component->withAttributes(['class' => 'btn btn-circle']); ?>
+<?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__attributesOriginal96fdff35e0ddfd31ddf96c499b591184)): ?>
+<?php $attributes = $__attributesOriginal96fdff35e0ddfd31ddf96c499b591184; ?>
+<?php unset($__attributesOriginal96fdff35e0ddfd31ddf96c499b591184); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginal96fdff35e0ddfd31ddf96c499b591184)): ?>
+<?php $component = $__componentOriginal96fdff35e0ddfd31ddf96c499b591184; ?>
+<?php unset($__componentOriginal96fdff35e0ddfd31ddf96c499b591184); ?>
+<?php endif; ?>
+
             
             <?php
 $__split = function ($name, $params = []) {
