@@ -101,6 +101,68 @@ use App\Models\Category;
 <?php $component = $__componentOriginal7c3255ff27a5c6d076ca64dbcfc1f879; ?>
 <?php unset($__componentOriginal7c3255ff27a5c6d076ca64dbcfc1f879); ?>
 <?php endif; ?>
+                <!--[if BLOCK]><![endif]--><?php if (\Illuminate\Support\Facades\Blade::check('admin')): ?>
+                    <?php if (isset($component)) { $__componentOriginald82092fa13795886cb51cb7dc7d7b48e = $component; } ?>
+<?php if (isset($attributes)) { $__attributesOriginald82092fa13795886cb51cb7dc7d7b48e = $attributes; } ?>
+<?php $component = Mary\View\Components\MenuSub::resolve(['title' => ''.e(__('Administration')).'','icon' => 'o-cog-6-tooth'] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
+<?php $component->withName('menu-sub'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag): ?>
+<?php $attributes = $attributes->except(\Mary\View\Components\MenuSub::ignoredParameterNames()); ?>
+<?php endif; ?>
+<?php $component->withAttributes([]); ?>
+                        <?php if (isset($component)) { $__componentOriginal7c3255ff27a5c6d076ca64dbcfc1f879 = $component; } ?>
+<?php if (isset($attributes)) { $__attributesOriginal7c3255ff27a5c6d076ca64dbcfc1f879 = $attributes; } ?>
+<?php $component = Mary\View\Components\MenuItem::resolve(['title' => ''.e(__('Manage categories')).'','icon' => 'o-tag','link' => ''.e(route('categories.index')).''] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
+<?php $component->withName('menu-item'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag): ?>
+<?php $attributes = $attributes->except(\Mary\View\Components\MenuItem::ignoredParameterNames()); ?>
+<?php endif; ?>
+<?php $component->withAttributes([]); ?>
+<?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__attributesOriginal7c3255ff27a5c6d076ca64dbcfc1f879)): ?>
+<?php $attributes = $__attributesOriginal7c3255ff27a5c6d076ca64dbcfc1f879; ?>
+<?php unset($__attributesOriginal7c3255ff27a5c6d076ca64dbcfc1f879); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginal7c3255ff27a5c6d076ca64dbcfc1f879)): ?>
+<?php $component = $__componentOriginal7c3255ff27a5c6d076ca64dbcfc1f879; ?>
+<?php unset($__componentOriginal7c3255ff27a5c6d076ca64dbcfc1f879); ?>
+<?php endif; ?>
+                        <?php if (isset($component)) { $__componentOriginal7c3255ff27a5c6d076ca64dbcfc1f879 = $component; } ?>
+<?php if (isset($attributes)) { $__attributesOriginal7c3255ff27a5c6d076ca64dbcfc1f879 = $attributes; } ?>
+<?php $component = Mary\View\Components\MenuItem::resolve(['title' => ''.e(__('Add a category')).'','icon' => 'o-plus-circle','link' => ''.e(route('categories.create')).''] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
+<?php $component->withName('menu-item'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag): ?>
+<?php $attributes = $attributes->except(\Mary\View\Components\MenuItem::ignoredParameterNames()); ?>
+<?php endif; ?>
+<?php $component->withAttributes([]); ?>
+<?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__attributesOriginal7c3255ff27a5c6d076ca64dbcfc1f879)): ?>
+<?php $attributes = $__attributesOriginal7c3255ff27a5c6d076ca64dbcfc1f879; ?>
+<?php unset($__attributesOriginal7c3255ff27a5c6d076ca64dbcfc1f879); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginal7c3255ff27a5c6d076ca64dbcfc1f879)): ?>
+<?php $component = $__componentOriginal7c3255ff27a5c6d076ca64dbcfc1f879; ?>
+<?php unset($__componentOriginal7c3255ff27a5c6d076ca64dbcfc1f879); ?>
+<?php endif; ?>
+                     <?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__attributesOriginald82092fa13795886cb51cb7dc7d7b48e)): ?>
+<?php $attributes = $__attributesOriginald82092fa13795886cb51cb7dc7d7b48e; ?>
+<?php unset($__attributesOriginald82092fa13795886cb51cb7dc7d7b48e); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginald82092fa13795886cb51cb7dc7d7b48e)): ?>
+<?php $component = $__componentOriginald82092fa13795886cb51cb7dc7d7b48e; ?>
+<?php unset($__componentOriginald82092fa13795886cb51cb7dc7d7b48e); ?>
+<?php endif; ?>
+                <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
             <?php if (isset($component)) { $__componentOriginal254139bd69d0def79ecb6c40efbc400d = $component; } ?>
 <?php if (isset($attributes)) { $__attributesOriginal254139bd69d0def79ecb6c40efbc400d = $attributes; } ?>
 <?php $component = Mary\View\Components\MenuSeparator::resolve([] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>

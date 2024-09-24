@@ -17,6 +17,10 @@ new class extends Component
 
     public function mount(): void
     {
+        // if (Auth::id() !== $this->user->id) {
+        //     abort(403);
+        // }
+
         $this->user = Auth::user();
 
         $this->fill($this->user);
