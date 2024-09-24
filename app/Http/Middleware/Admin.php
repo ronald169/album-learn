@@ -17,8 +17,8 @@ class Admin
     {
         $user = $request->user();
 
-        if (!$user || !$request->user()->admin) {
-            redirect('home');
+        if (!$user || !$user->admin) {
+            return redirect('home');
         }
 
         return $next($request);

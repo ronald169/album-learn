@@ -266,6 +266,15 @@
     "Images count": "Nombre d'images",
     "Manage categories": "Gestion des catégories",
     "Add a category": "Ajouter une catégorie",
-    "Category updated with success.": "La catégorie a bien été modifiée"
+    "Category updated with success.": "La catégorie a bien été modifiée",
+    "Manage users": "Gestion des utilisateurs",
+    "Filters": "Filtres",
+    "Search...": "Recherche...",
+    "Reset": "Réinitialiser",
+    "Filters cleared.": "Filtres nettoyés.",
+    "Users": "Utilisateurs",
+    "Are you sure to delete this user?": "Voulez-vous vraiment supprimer cet utilisateur ?",
+    "Registration": "Inscription",
+    "Adult": "Adulte"
 
 }

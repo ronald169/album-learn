@@ -39,6 +39,7 @@ new class extends Component
                     <x-menu-sub title="{{__('Administration')}}" icon="o-cog-6-tooth">
                         <x-menu-item title="{{__('Manage categories')}}" icon="o-tag" link="{{ route('categories.index') }}" />
                         <x-menu-item title="{{__('Add a category')}}" icon="o-plus-circle" link="{{ route('categories.create') }}" />
+                        <x-menu-item title="{{__('Manage users')}}" icon="o-user" link="{{ route('users.index') }}" />
                     </x-menu-sub>
                 @endadmin
             <x-menu-separator />
